@@ -1,0 +1,21 @@
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.android.gms:play-services:3.1.36'
+    compile 'com.android.support:support-v4:13.0.0'
+    compile project(':ActionBarSherlock')
+}
+
+android {
+    compileSdkVersion 17
+    buildToolsVersion "17.0.0"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 16
+    }
+}
