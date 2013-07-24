@@ -92,12 +92,14 @@ public class DetailFragment extends SherlockFragment {
      * upon each new MapFragment with the same ID. The solution is to manually remove the MapFragment
      * and thus recreate the underlying map each time the fragment is inflated.
      */
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        Fragment fragment = getFragmentManager().findFragmentById(R.id.mini_map);
-//        if (fragment != null ) {
-//            getFragmentManager().beginTransaction().remove(fragment).commit();
-//        }
-//    }
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        FragmentManager fragmentManager = getChildFragmentManager();
+        Fragment fragment = fragmentManager.findFragmentById(R.id.mini_map);
+        if (fragment != null && fragment.isResumed()) {
+            fragmentManager.beginTransaction().remove(fragment).commit();
+            fragmentManager.popBackStack();
+        }
+    }
 }

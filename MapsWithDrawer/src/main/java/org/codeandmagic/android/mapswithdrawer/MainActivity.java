@@ -138,6 +138,8 @@ public class MainActivity extends SherlockFragmentActivity implements AdapterVie
 
 
         FragmentManager fragmentManager = getSupportFragmentManager();
+        // This line is extremely important if the option menu is enabled for more than first level.
+        fragmentManager.popBackStack();
         fragmentManager.beginTransaction().replace(R.id.content_frame, fragment).commit();
 
         // update selected item and title, then close the drawer
