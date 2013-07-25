@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-import com.actionbarsherlock.app.SherlockFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -19,7 +18,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 /**
  * Created by evelyne24 on 22/07/2013.
  */
-public class BigMapFragment extends SherlockFragment implements GoogleMap.OnMyLocationChangeListener, GoogleMap.OnInfoWindowClickListener {
+public class BigMapFragment extends Fragment implements GoogleMap.OnMyLocationChangeListener, GoogleMap.OnInfoWindowClickListener {
 
     private static final int MAP_ZOOM = 13;
     private static final String SAVED_LOCATION = "saved_location";

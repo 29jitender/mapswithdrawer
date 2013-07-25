@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-import com.actionbarsherlock.app.SherlockFragment;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.GoogleMapOptions;
@@ -17,7 +16,7 @@ import com.google.android.gms.maps.model.LatLng;
 /**
  * Created by evelyne24 on 22/07/2013.
  */
-public class DetailFragment extends SherlockFragment {
+public class DetailFragment extends Fragment {
 
     public static final String LAT_LNG = "lat_lng";
     private static final int MINI_MAP_ZOOM = 15;

@@ -1,1 +1,1 @@
-include ':MapsWithDrawer', ':GooglePlayServices', ':ActionBarSherlock'
+include ':MapsWithDrawer', ':GooglePlayServices'
