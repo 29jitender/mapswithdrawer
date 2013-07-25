@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!--
+    Add the SupportMapFragment inside a RelativeLayout to avoid a bug for 2.x devices.
+    See: http://stackoverflow.com/questions/17112146/drawerlayout-with-google-maps
+-->
 <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
