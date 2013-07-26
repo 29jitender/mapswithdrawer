@@ -4,6 +4,7 @@ package org.codeandmagic.android.mapswithdrawer;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -102,12 +103,12 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         ) {
             public void onDrawerClosed(View view) {
                 getSupportActionBar().setTitle(title);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+                ActivityCompat.invalidateOptionsMenu(MainActivity.this);
             }
 
             public void onDrawerOpened(View drawerView) {
                 getSupportActionBar().setTitle(drawerTitle);
-                invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
+                ActivityCompat.invalidateOptionsMenu(MainActivity.this);
             }
         };
         drawerLayout.setDrawerListener(drawerToggle);
